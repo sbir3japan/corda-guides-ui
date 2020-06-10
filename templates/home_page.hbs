@@ -1,7 +1,14 @@
 {{!-- Hide header background on the home page --}}
-<style>
+{{!-- <style>
   .header {
     background-color: transparent;
+    box-shadow: none;
+  }
+</style> --}}
+
+<style>
+  .header {
+    background-color: #fff;
     box-shadow: none;
   }
 </style>
@@ -33,14 +40,18 @@
 
 
 <section>
-  <h1 class="home-categories-heading" id="browse-knowledge-base">Browse knowledge base</h1>
+  <h1 class="home-categories-heading sbir3-categories-title" id="corda-guide-title">Corda Guides</h1>
+  {{!-- <h3 class="home-categories-desc" id="corda-guide-desc">Our Corda knowledge base</h1> --}}
   <div id="sbir3-category-container" class="container">
     <div class="sections">
       {{#each categories}}
         <!-- FAQ -->
         {{#is id 360003465853}}
         <div class="sbir3-category-item sbir3-four-wide">
-          <svg width="61px" height="54px" viewBox="0 0 61 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #30AABC"><title>{{name}}</title><g id="HC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Zendesk-Help" transform="translate(-168.066664, -1376.000000)" fill="#02363D"><g id="Group-4" transform="translate(169.000000, 1376.013550)"><polygon id="Fill-1" points="48.0006 0 0.0006 32 2.0006 40 59.9986 40"></polygon><path d="M32,44 C32,49.522 27.524,54 22,54 C16.476,54 12,49.522 12,44" id="Fill-2"></path></g></g></g></svg>
+          <svg class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+          </svg>
           <a data-image="updates" href="{{url}}">{{name}}</a>
         </div>
         {{/is}}
@@ -48,7 +59,10 @@
         <!-- Documentation -->
         {{#is id 360003443034}}
         <div class="sbir3-category-item sbir3-four-wide">
-          <svg width="61px" height="54px" viewBox="0 0 61 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #30AABC"><title>{{name}}</title><g id="HC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Zendesk-Help" transform="translate(-168.066664, -1376.000000)" fill="#02363D"><g id="Group-4" transform="translate(169.000000, 1376.013550)"><polygon id="Fill-1" points="48.0006 0 0.0006 32 2.0006 40 59.9986 40"></polygon><path d="M32,44 C32,49.522 27.524,54 22,54 C16.476,54 12,49.522 12,44" id="Fill-2"></path></g></g></g></svg>
+          <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+          </svg>
           <a data-image="updates" href="{{url}}">{{name}}</a>
         </div>
         {{/is}}
@@ -56,7 +70,11 @@
         <!-- Corda Information -->
         {{#is id 360003465753}}
         <div class="sbir3-category-item sbir3-four-wide">
-          <svg width="61px" height="54px" viewBox="0 0 61 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #30AABC"><title>{{name}}</title><g id="HC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Zendesk-Help" transform="translate(-168.066664, -1376.000000)" fill="#02363D"><g id="Group-4" transform="translate(169.000000, 1376.013550)"><polygon id="Fill-1" points="48.0006 0 0.0006 32 2.0006 40 59.9986 40"></polygon><path d="M32,44 C32,49.522 27.524,54 22,54 C16.476,54 12,49.522 12,44" id="Fill-2"></path></g></g></g></svg>
+          <svg class="bi bi-info-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+            <circle cx="8" cy="4.5" r="1"/>
+          </svg>
           <a data-image="updates" href="{{url}}">{{name}}</a>
         </div>
         {{/is}}
