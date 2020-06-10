@@ -8,7 +8,7 @@
 
 <section class="section hero hero-large">
   <div class="hero-inner">
-    <h1 class="hero-inner-home-heading">Hi. How can we help?</h1>
+    <h1 class="hero-inner-home-heading">{{dc 'home_title'}}</h1>
     <div class="hero-inner-search">
       {{search submit=false instant=settings.instant_search class="search search-full" placeholder="Search knowledge base..."}}
     </div>
@@ -16,57 +16,63 @@
         href="/hc/en-us/articles/360014969032">Evoko Liso</a> or <a href="/hc/en-us/articles/360032926451">Evoko
         Pusco</a>?</p>
   </div>
+
+  <div class="hero-inner">
+    <form style="display: block; text-align: center; margin: 20px;" class="submitbutton"
+      action="{{page_path 'new_request'}}">
+      <input type="submit" class="sbir3-input-button" value="{{dc 'home_inquiry'}}" />
+    </form>
+
+    <form style="display: block; text-align: center; margin: 20px;" class="requestbutton"
+      action="{{page_path 'my_activities'}}">
+      <input type="submit" class="sbir3-input-button" value="{{dc 'home_inquiryHistory'}}" />
+    </form>
+  </div>
+  
 </section>
 
-<div class="container">
-  <section class="section knowledge-base">
-    <h1 class="home-categories-heading" id="browse-knowledge-base">Browse knowledge base</h1>
-    <section class="categories blocks">
-      <ul class="blocks-list">
-        {{#each categories}}
-        {{#if ../has_multiple_categories}}
-        <li class="blocks-item">
-          <a href='{{url}}' class="blocks-item-link">
-            {{#is name 'Evoko Room Manager'}}
-            <img alt="Evoko Room Manager" src="{{asset 'home-room-manager.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Minto'}}
-            <img alt="Evoko Minto" src="{{asset 'home-minto.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Liso'}}
-            <img alt="Evoko Liso" src="{{asset 'home-liso.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Groupie'}}
-            <img alt="Evoko Groupie" src="{{asset 'home-groupie.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Pusco'}}
-            <img alt="Evoko Pusco" src="{{asset 'home-pusco.png'}}" />
-            {{/is}}
-            {{#is name 'General'}}
-            <img alt="General" src="{{asset 'home-general.png'}}" />
-            {{/is}}
-            <h2 class="blocks-item-title">{{name}}</h2>
-            <p class="blocks-item-description">{{excerpt description}}</p>
-          </a>
-        </li>
-        {{else}}
-        {{#each sections}}
-        <li class="blocks-item">
-          <a href='{{url}}' class="blocks-item-link">
-            <h2 class="blocks-item-title">
-              {{name}}
-            </h2>
-            <p class="blocks-item-description">{{excerpt description}}</p>
-          </a>
-        </li>
-        {{/each}}
-        {{/if}}
-        {{/each}}
-      </ul>
-      {{pagination}}
-    </section>
 
-    {{!-- {{#if promoted_articles}}
+<section>
+  <h1 class="home-categories-heading" id="browse-knowledge-base">Browse knowledge base</h1>
+  <div id="sbir3-category-container" class="container">
+    <div class="sections">
+      {{#each categories}}
+        <!-- FAQ -->
+        {{#is id 360003465853}}
+        <div class="sbir3-category-item sbir3-four-wide">
+          <svg width="61px" height="54px" viewBox="0 0 61 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #30AABC"><title>{{name}}</title><g id="HC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Zendesk-Help" transform="translate(-168.066664, -1376.000000)" fill="#02363D"><g id="Group-4" transform="translate(169.000000, 1376.013550)"><polygon id="Fill-1" points="48.0006 0 0.0006 32 2.0006 40 59.9986 40"></polygon><path d="M32,44 C32,49.522 27.524,54 22,54 C16.476,54 12,49.522 12,44" id="Fill-2"></path></g></g></g></svg>
+          <a data-image="updates" href="{{url}}">{{name}}</a>
+        </div>
+        {{/is}}
+
+        <!-- Documentation -->
+        {{#is id 360003443034}}
+        <div class="sbir3-category-item sbir3-four-wide">
+          <svg width="61px" height="54px" viewBox="0 0 61 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #30AABC"><title>{{name}}</title><g id="HC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Zendesk-Help" transform="translate(-168.066664, -1376.000000)" fill="#02363D"><g id="Group-4" transform="translate(169.000000, 1376.013550)"><polygon id="Fill-1" points="48.0006 0 0.0006 32 2.0006 40 59.9986 40"></polygon><path d="M32,44 C32,49.522 27.524,54 22,54 C16.476,54 12,49.522 12,44" id="Fill-2"></path></g></g></g></svg>
+          <a data-image="updates" href="{{url}}">{{name}}</a>
+        </div>
+        {{/is}}
+
+        <!-- Corda Information -->
+        {{#is id 360003465753}}
+        <div class="sbir3-category-item sbir3-four-wide">
+          <svg width="61px" height="54px" viewBox="0 0 61 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #30AABC"><title>{{name}}</title><g id="HC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Zendesk-Help" transform="translate(-168.066664, -1376.000000)" fill="#02363D"><g id="Group-4" transform="translate(169.000000, 1376.013550)"><polygon id="Fill-1" points="48.0006 0 0.0006 32 2.0006 40 59.9986 40"></polygon><path d="M32,44 C32,49.522 27.524,54 22,54 C16.476,54 12,49.522 12,44" id="Fill-2"></path></g></g></g></svg>
+          <a data-image="updates" href="{{url}}">{{name}}</a>
+        </div>
+        {{/is}}
+      {{/each}}
+      
+    </div>
+      
+  </div>
+  {{pagination}}
+</section>
+
+
+
+<div class="container">
+      
+        {{!-- {{#if promoted_articles}}
     <section class="articles">
       <h3>{{t 'promoted_articles'}}</h3>
       <ul class="article-list promoted-articles">
@@ -86,7 +92,7 @@
     {{/if}}
   </section> --}}
 
-    {{!-- {{#if help_center.community_enabled}}
+        {{!-- {{#if help_center.community_enabled}}
     <section class="section community">
       <h2>{{t 'community'}}</h2>
       {{#link 'community' class='community-link'}}
@@ -97,9 +103,9 @@
     </section>
     {{/if}} --}}
 
-    {{!-- <section class="section activity">
+        {{!-- <section class="section activity">
       {{#if settings.show_recent_activity}}
       {{recent_activity}}
       {{/if}}
     </section> --}}
-</div>
+    </div>
