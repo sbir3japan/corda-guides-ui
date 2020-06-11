@@ -12,7 +12,6 @@
 
   <div class="search-results">
     <h2 class="search-results-heading">
-      {{#if results_count}}Hiya! {{else}}Oh! {{/if}}
       {{t 'results' query=query count=results_count}}
       {{#if results_count}} 🎉{{else}} 🙈{{/if}}
     </h2>
@@ -98,8 +97,7 @@
 
     {{else}}
     <p>
-      Sorry, we looked everywhere. Please try a different search, <a href="/hc/en-us#browse-knowledge-base">browse the
-        knowledge base</a> or <a href="/hc/en-us/requests/new">submit a request</a>.
+      {{dc 'homepage_no_result_suggestion'}}
     </p>
     {{/if}}
 

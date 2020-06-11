@@ -31,8 +31,8 @@
   
 </section>
 
-<section>
-  <h1 class="home-categories-heading sbir3-categories-title" id="corda-guide-title">Corda Guides</h1>
+<section id="corda-guide">
+  <h1 class="home-categories-heading sbir3-categories-title" id="corda-guide-title">{{dc 'homepage_categories_title'}}</h1>
   {{!-- <h3 class="home-categories-desc" id="corda-guide-desc">Our Corda knowledge base</h1> --}}
   <div id="sbir3-category-container" class="container">
     <div class="sections">
@@ -119,3 +119,12 @@
       {{/if}}
     </section> --}}
     </div>
+
+{{!-- A hack to use dynamic contents for search bar placeholder. --}}
+<p hidden id="search_placeholder">{{dc 'homepage_search_full_placeholder'}}</p>
+
+<script>
+  var placeholderElem = document.getElementById("search_placeholder");
+  var placeholderString = placeholderElem.innerText;
+  document.getElementById("query").placeholder = placeholderString;
+</script>

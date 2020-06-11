@@ -1,6 +1,7 @@
 <section class="section hero hero-small">
   <header class="hero-inner">
     <div class="hero-inner-search">
+      {{!-- {{search submit=false instant=settings.instant_search class="search search-full" placeholder="Search knowledge base..."}} --}}
       {{search submit=false instant=settings.instant_search class="search search-full" placeholder="Search knowledge base..."}}
     </div>
   </header>
@@ -232,6 +233,17 @@
     </article>
   </div>
 </div>
+
+{{!-- A hack to use dynamic contents for search bar placeholder. --}}
+<p hidden id="search_placeholder">{{dc 'homepage_search_full_placeholder'}}</p>
+
+<script>
+  var placeholderElem = document.getElementById("search_placeholder");
+  var placeholderString = placeholderElem.innerText;
+  document.getElementById("query").placeholder = placeholderString;
+</script>
+
+
 {{!-- Smooth scrolling --}}
 <script src="{{asset 'smooth-scroll.polyfills.min.js'}}"></script>
 <script>var scroll = new SmoothScroll('a[href*="#"]', { offset: 8, topOnEmptyHash: false, speed: 500, speedAsDuration: true });</script>

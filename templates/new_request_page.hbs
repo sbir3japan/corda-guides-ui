@@ -20,9 +20,18 @@
         {{/if}}
       </h1>
       <p class="form-header-description">
-        Please refer to our <a href="../articles/360047900534" target="_blank">Ticket Creation Guideline</a> for general rules of how to submit your request.
+        {{dc 'homepage_ticket_guideline_desc_1'}}<a href="../articles/360047900534" target="_blank">{{dc 'homepage_ticket_guideline_name'}}</a>{{dc 'homepage_ticket_guideline_desc_2'}}
       </p>
     </header>
     {{request_form}}
   </div>
 </div>
+
+{{!-- A hack to use dynamic contents for search bar placeholder. --}}
+<p  hidden id="search_placeholder">{{dc 'homepage_search_full_placeholder'}}</p>
+
+<script>
+  var placeholderElem = document.getElementById("search_placeholder");
+  var placeholderString = placeholderElem.innerText;
+  document.getElementById("query").placeholder = placeholderString;
+</script>

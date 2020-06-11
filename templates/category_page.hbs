@@ -1,7 +1,8 @@
 <section class="section hero hero-small">
   <header class="hero-inner">
     <div class="hero-inner-search">
-      {{search submit=false scoped=settings.scoped_kb_search class="search search-full" placeholder="Search knowledge base..."}}
+      {{!-- {{search submit=false scoped=settings.scoped_kb_search class="search search-full" placeholder="Search knowledge base..."}} --}}
+      {{search submit=false instant=settings.instant_search class="search search-full" placeholder="Search knowledge base..."}}
     </div>
   </header>
 </section>
@@ -59,11 +60,22 @@
   </div>
 </div>
 
+{{!-- A hack to use dynamic contents for search bar placeholder. --}}
+<p hidden id="search_placeholder">{{dc 'homepage_search_full_placeholder'}}</p>
+
+<script>
+  var placeholderElem = document.getElementById("search_placeholder");
+  var placeholderString = placeholderElem.innerText;
+  document.getElementById("query").placeholder = placeholderString;
+</script>
+
+
 {{!-- get category name and add to search bar placeholder --}}
-{{#if settings.scoped_kb_search}}
+{{!-- {{#if settings.scoped_kb_search}}
 <script>
   var breadcrumbs = document.getElementsByClassName("breadcrumbs");
   var categoryName = breadcrumbs[0].children[1].title;
   document.getElementById("query").placeholder = "Search " + categoryName + "...";
 </script>
-{{/if}}
+{{/if}} --}}
+
