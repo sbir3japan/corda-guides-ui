@@ -1,9 +1,9 @@
 {
-  "name": "Evoko theme",
-  "author": "Evoko Unlimited AB",
-  "version": "2.0.2",
+  "name": "SBI R3 Japan Help Center",
+  "author": "SBI R3 Japan",
+  "version": "1.0",
   "api_version": 1,
-  "default_locale": "en-us",
+  "default_locale": "ja",
   "settings": [
     {
       "label": "colors_group_label",
