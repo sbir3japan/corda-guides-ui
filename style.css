@@ -189,9 +189,9 @@ ul {
 
 .button,
 [role=button] {
-    border: 1px solid #74bf95;
+    border: 1px solid #ec1d24;
     border-radius: 4px;
-    color: #74bf95;
+    color: #ec1d24;
     cursor: pointer;
     display: inline-block;
     font-size: 12px;
@@ -219,7 +219,7 @@ ul {
 
 .button::after,
 [role=button]::after {
-    color: #74bf95
+    color: #ffffff
 }
 
 .button:hover,
@@ -230,7 +230,7 @@ ul {
 [role=button]:active,
 [role=button]:focus,
 [role=button][aria-selected=true] {
-    background-color: #74bf95;
+    background-color: #ec1d24;
     color: #fff;
     text-decoration: none
 }
@@ -374,7 +374,7 @@ input[type=submit][disabled] {
 }
 
 .form-header-heading {
-    background-color: rgba(168, 225, 240, .7);
+    background-color: #33333321;
     margin: 0 auto;
     width: -moz-fit-content;
     width: -webkit-fit-content;
@@ -776,7 +776,7 @@ input[type=submit][disabled] {
 }
 
 .avatar .icon-agent::before {
-    background-color: #74bf95;
+    background-color: #333333;
     border: 2px solid #fff;
     border-radius: 50%;
     bottom: -4px;
@@ -1046,8 +1046,12 @@ input[type=submit][disabled] {
     right: 0;
     z-index: 1;
     content: "";
-    opacity: .45;
-    background-color: #7d7f82;
+    /* hero style old */
+    /* opacity: .45; */
+    /* background-color: #7d7f82; */
+    opacity: .15;
+    background-color: #ffffff;
+    
 }
 
 .hero-large::before {
@@ -1060,17 +1064,21 @@ input[type=submit][disabled] {
 
 .hero-inner {
     position: relative;
-    top: 50%;
+    /* hero style old */
+    /* top: 50%; */
+    top: 38%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     max-width: 1160px;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
     z-index: 2;
     color: #fff
 }
 
 .hero-inner a {
-    color: #fff;
+    /* hero style old */
+    /* color: #fff; */
+    color: #333;
     font-weight: 600;
     text-decoration: underline
 }
@@ -1082,7 +1090,9 @@ input[type=submit][disabled] {
 }
 
 .hero-inner-home-heading {
-    color: #fff;
+    /* hero style old */
+    /* color: #fff; */
+    color: #333;
     font-weight: 600;
     margin-bottom: 16px
 }
@@ -1585,7 +1595,7 @@ input[type=submit][disabled] {
 .see-all-articles {
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: rgba(168, 225, 240, .7);
+    background-color: #c7c9cc;
     color: #24292e
 }
 
@@ -2013,8 +2023,8 @@ input[type=submit][disabled] {
 
 .article-vote {
     background: transparent;
-    border: 1px solid #74bf95;
-    color: #74bf95;
+    border: 1px solid #ec1d24;
+    color: #ec1d24;
     margin: 10px 5px;
     min-width: 90px;
     width: auto
@@ -2031,17 +2041,18 @@ input[type=submit][disabled] {
 }
 
 .article-vote::after {
-    content: attr(title)
+    content: attr(title);
+    color: #ec1d24
 }
 
 .article-vote:focus,
 .article-vote:active {
     background-color: transparent;
-    color: #74bf95
+    color: #ec1d24
 }
 
 .article-vote:hover {
-    background-color: #74bf95
+    background-color: #ec1d24
 }
 
 .article-vote:hover::before,
@@ -2143,7 +2154,7 @@ input[type=submit][disabled] {
 }
 
 .sidenav-item-show-all {
-    background-color: rgba(168, 225, 240, .7) !important
+    background-color: #c7c9cc !important
 }
 
 .sidenav-item-show-all:hover {
@@ -2958,18 +2969,19 @@ input[type=submit][disabled] {
     right: auto
 }
 
-.status-label-pending,
 .status-label-not-planned {
     background-color: #eee;
     color: #515c67
 }
 
 .status-label-pending {
-    text-align: center
+    text-align: center;
+    background-color: rgb(48, 145, 236);
+    color: #ddd
 }
 
 .status-label-open {
-    background-color: #cc3340
+    background-color: rgb(227, 79, 50)
 }
 
 .status-label-closed {
@@ -2981,7 +2993,7 @@ input[type=submit][disabled] {
 }
 
 .status-label-new {
-    background-color: #ffd12a
+    background-color: rgb(255, 182, 72)
 }
 
 .status-label-hold {
@@ -3416,7 +3428,7 @@ input[type=submit][disabled] {
 
 @media(min-width: 768px) {
     .collapsible-nav-list li[aria-selected=true] {
-        border-bottom: 4px solid #ec1d24;
+        border-bottom: 4px solid #333333;
         -webkit-box-ordinal-group: 2;
         order: 1;
         padding: 15px 0 11px 0
@@ -3532,7 +3544,7 @@ input[type=submit][disabled] {
 }
 
 .my-activities-sub-nav li[aria-selected=true] {
-    border-color: #ec1d24
+    border-color: #333333
 }
 
 .my-activities-table .striped-list-title {
@@ -4073,7 +4085,7 @@ input[type=submit][disabled] {
 }
 
 .pagination-current {
-    background-color: rgba(168, 225, 240, .7)
+    background-color: #c7c9cc
 }
 
 .pagination-current a,
@@ -4338,12 +4350,12 @@ input[type=submit][disabled] {
 }
 
 .profile-header .options [data-action=edit-profile] {
-    background-color: #74bf95;
+    background-color: #ec1d24;
     border: 0;
     color: #fff;
     line-height: normal;
     padding: 8px 20px;
-    outline-color: #74bf95
+    outline-color: #ec1d24
 }
 
 .profile-header .description {
@@ -4501,9 +4513,9 @@ input[type=submit][disabled] {
 
 .profile-private-badge {
     flex-basis: 100%;
-    border: solid 1px #74bf95;
+    border: solid 1px #ec1d24;
     border-radius: 4px;
-    color: #74bf95;
+    color: #ec1d24;
     padding: 5px 20px;
     font-size: 12px;
     text-align: center
@@ -5334,7 +5346,7 @@ pre[class*=language-].line-numbers>code {
   }
 
   #sbir3-category-container .sections .sbir3-category-item svg {
-    background: #FAFAFA;
+    background: #f2f2f2;
     width: 120px;
     height: 120px;
     position: absolute;
