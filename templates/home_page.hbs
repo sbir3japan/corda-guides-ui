@@ -17,15 +17,15 @@
         Pusco</a>?</p> --}}
   </div>
 
-  <div class="hero-inner">
-    <form style="display: block; text-align: center; margin: 20px;" class="submitbutton"
-      action="{{page_path 'new_request'}}">
-      <input type="submit" class="sbir3-input-button" value="{{dc 'home_inquiry'}}" />
-    </form>
-
+  <div class="hero-inner sbir3-hero-inputs-container">
     <form style="display: block; text-align: center; margin: 20px;" class="requestbutton"
       action="{{page_path 'my_activities'}}">
-      <input type="submit" class="sbir3-input-button" value="{{dc 'home_inquiryHistory'}}" />
+      <input type="submit" class="sbir3-input-button sbir3-white-button" value="{{dc 'home_inquiryHistory'}}" />
+    </form>
+
+    <form style="display: block; text-align: center; margin: 20px;" class="submitbutton"
+      action="{{page_path 'new_request'}}">
+      <input type="submit" class="sbir3-input-button sbir3-red-button" value="{{dc 'home_inquiry'}}" />
     </form>
   </div>
   

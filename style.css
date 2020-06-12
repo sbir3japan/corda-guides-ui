@@ -5274,6 +5274,12 @@ pre[class*=language-].line-numbers>code {
     background-position: center;
     background-size: cover;
   }
+
+  .sbir3-hero-inputs-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .sbir3-hero-font {
     color: white;
@@ -5288,13 +5294,28 @@ pre[class*=language-].line-numbers>code {
   }
   
   .sbir3-input-button {
-    border-radius: 5px;
-    background-color: #ec1d24;
+    border-radius: 2px;
     font-weight: 600  !important;
+    position: relative;
+    top: 0;
+    transition: top ease 0.25s !important;
+    width: 200px;
+    height: 56px;
+  }
+
+  .sbir3-red-button {
+    background-color: #ec1d24 !important;
+    color: #fff
+  }
+
+  .sbir3-white-button {
+    background-color: #ffffff !important;
+    color: #ec1d24 !important
   }
   
   .sbir3-input-button:hover {  
-    background-color: #ff050e !important;
+    top: -5px !important;
+    opacity: 0.9;
   }
 
   .sbir3-four-wide {
