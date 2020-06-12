@@ -274,14 +274,14 @@
           "type": "checkbox",
           "description": "recently_viewed_articles_description",
           "label": "recently_viewed_articles_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_related_articles",
           "type": "checkbox",
           "description": "related_articles_description",
           "label": "related_articles_label",
-          "value": false
+          "value": true
         },
         {
           "identifier": "show_article_sharing",
