@@ -1,72 +1,88 @@
 {{!-- Hide header background on the home page --}}
-<style>
+{{!-- <style>
   .header {
     background-color: transparent;
     box-shadow: none;
   }
-</style>
+</style> --}}
 
 <section class="section hero hero-large">
   <div class="hero-inner">
-    <h1 class="hero-inner-home-heading">Hi. How can we help?</h1>
+    <h1 class="hero-inner-home-heading">{{dc 'home_title'}}</h1>
     <div class="hero-inner-search">
       {{search submit=false instant=settings.instant_search class="search search-full" placeholder="Search knowledge base..."}}
     </div>
-    <p class="hero-inner-description"><strong><i class="fas fa-book"></i> Guides:</strong> getting started with <a
+    {{!-- <p class="hero-inner-description"><strong><i class="fas fa-book"></i> Guides:</strong> getting started with <a
         href="/hc/en-us/articles/360014969032">Evoko Liso</a> or <a href="/hc/en-us/articles/360032926451">Evoko
-        Pusco</a>?</p>
+        Pusco</a>?</p> --}}
   </div>
+
+  <div class="hero-inner sbir3-hero-inputs-container">
+    <form style="display: block; text-align: center; margin: 20px;" class="requestbutton"
+      action="{{page_path 'my_activities'}}">
+      <input type="submit" class="sbir3-input-button sbir3-white-button" value="{{dc 'home_inquiryHistory'}}" />
+    </form>
+
+    <form style="display: block; text-align: center; margin: 20px;" class="submitbutton"
+      action="{{page_path 'new_request'}}">
+      <input type="submit" class="sbir3-input-button sbir3-red-button" value="{{dc 'home_inquiry'}}" />
+    </form>
+  </div>
+  
 </section>
 
-<div class="container">
-  <section class="section knowledge-base">
-    <h1 class="home-categories-heading" id="browse-knowledge-base">Browse knowledge base</h1>
-    <section class="categories blocks">
-      <ul class="blocks-list">
-        {{#each categories}}
-        {{#if ../has_multiple_categories}}
-        <li class="blocks-item">
-          <a href='{{url}}' class="blocks-item-link">
-            {{#is name 'Evoko Room Manager'}}
-            <img alt="Evoko Room Manager" src="{{asset 'home-room-manager.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Minto'}}
-            <img alt="Evoko Minto" src="{{asset 'home-minto.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Liso'}}
-            <img alt="Evoko Liso" src="{{asset 'home-liso.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Groupie'}}
-            <img alt="Evoko Groupie" src="{{asset 'home-groupie.png'}}" />
-            {{/is}}
-            {{#is name 'Evoko Pusco'}}
-            <img alt="Evoko Pusco" src="{{asset 'home-pusco.png'}}" />
-            {{/is}}
-            {{#is name 'General'}}
-            <img alt="General" src="{{asset 'home-general.png'}}" />
-            {{/is}}
-            <h2 class="blocks-item-title">{{name}}</h2>
-            <p class="blocks-item-description">{{excerpt description}}</p>
-          </a>
-        </li>
-        {{else}}
-        {{#each sections}}
-        <li class="blocks-item">
-          <a href='{{url}}' class="blocks-item-link">
-            <h2 class="blocks-item-title">
-              {{name}}
-            </h2>
-            <p class="blocks-item-description">{{excerpt description}}</p>
-          </a>
-        </li>
-        {{/each}}
-        {{/if}}
-        {{/each}}
-      </ul>
-      {{pagination}}
-    </section>
+<section id="corda-guide">
+  <h1 class="home-categories-heading sbir3-categories-title" id="corda-guide-title">{{dc 'homepage_categories_title'}}</h1>
+  {{!-- <h3 class="home-categories-desc" id="corda-guide-desc">Our Corda knowledge base</h1> --}}
+  <div id="sbir3-category-container" class="container">
+    <div class="sections">
+      {{#each categories}}
+        <!-- FAQ -->
+        {{#is id 360003465853}}
+        <div class="sbir3-category-item sbir3-four-wide">
+          <svg class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+          </svg>
+          <a data-image="updates" href="{{url}}">{{name}}</a>
+        </div>
+        {{/is}}
 
-    {{!-- {{#if promoted_articles}}
+        <!-- Documentation -->
+        {{#is id 360003443034}}
+        <div class="sbir3-category-item sbir3-four-wide">
+          <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+          </svg>
+          <a data-image="updates" href="{{url}}">{{name}}</a>
+        </div>
+        {{/is}}
+
+        <!-- Corda Information -->
+        {{#is id 360003465753}}
+        <div class="sbir3-category-item sbir3-four-wide">
+          <svg class="bi bi-info-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+            <circle cx="8" cy="4.5" r="1"/>
+          </svg>
+          <a data-image="updates" href="{{url}}">{{name}}</a>
+        </div>
+        {{/is}}
+      {{/each}}
+      
+    </div>
+      
+  </div>
+  {{pagination}}
+</section>
+
+
+
+<div class="container">
+      
+        {{!-- {{#if promoted_articles}}
     <section class="articles">
       <h3>{{t 'promoted_articles'}}</h3>
       <ul class="article-list promoted-articles">
@@ -86,7 +102,7 @@
     {{/if}}
   </section> --}}
 
-    {{!-- {{#if help_center.community_enabled}}
+        {{!-- {{#if help_center.community_enabled}}
     <section class="section community">
       <h2>{{t 'community'}}</h2>
       {{#link 'community' class='community-link'}}
@@ -97,9 +113,18 @@
     </section>
     {{/if}} --}}
 
-    {{!-- <section class="section activity">
+        {{!-- <section class="section activity">
       {{#if settings.show_recent_activity}}
       {{recent_activity}}
       {{/if}}
     </section> --}}
-</div>
+    </div>
+
+{{!-- A hack to use dynamic contents for search bar placeholder. --}}
+<p hidden id="search_placeholder">{{dc 'homepage_search_full_placeholder'}}</p>
+
+<script>
+  var placeholderElem = document.getElementById("search_placeholder");
+  var placeholderString = placeholderElem.innerText;
+  document.getElementById("query").placeholder = placeholderString;
+</script>

@@ -165,4 +165,16 @@ document.addEventListener('DOMContentLoaded', function() {
       seeAllTrigger.parentNode.removeChild(seeAllTrigger);
     });
   }
+
+
+  // @TODO - see if we can move the logic to this file
+  
+  // var placeholderElem = document.getElementById("search_placeholder");
+  // var searchBarInput = document.getElementById("query");
+  // if (placeholderElem && searchBarInput) {
+  //   var placeholderString = placeholderElem.innerText;
+  //   searchBarInput.placeholder = placeholderElem.innerText;
+  // }
+  
+
 });
