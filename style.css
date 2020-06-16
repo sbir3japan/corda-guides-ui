@@ -5338,7 +5338,7 @@ pre[class*=language-].line-numbers>code {
     transition: top 0.25s;
     overflow: hidden;
     margin-bottom: 40px;
-    height: 120px;
+    height: 160px;
   }
   
   .sbir3-category-item:hover, .sbir3-category-item:focus, .sbir3-category-item:active {
@@ -5368,17 +5368,17 @@ pre[class*=language-].line-numbers>code {
 
   #sbir3-category-container .sections .sbir3-category-item svg {
     background: #f2f2f2;
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     position: absolute;
     left: 0;
     top: 0;
-    padding: 40px;
+    padding: 45px;
   }
 
   #sbir3-category-container .sections .sbir3-category-item a {
     color: #03363d;
-    padding: 1rem 1rem 1rem calc(120px + 1rem);
+    padding: 1rem 1rem 1rem calc(160px + 1rem);
     position: absolute;
     left: 0;
     right: 0;
@@ -5388,14 +5388,23 @@ pre[class*=language-].line-numbers>code {
     font-size: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: center;
     text-decoration: none;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
     word-wrap: break-word;
   }
+
+  #sbir3-category-container .sections .sbir3-category-item a h3{
+      font-size: 1rem;
+  }
+
+  #sbir3-category-container .sections .sbir3-category-item a div{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #666f86!important;
+}
   
   .sbir3-category-link {
     color: #ec1d24 !important;
