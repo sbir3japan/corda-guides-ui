@@ -21,6 +21,7 @@
   </div>
 
   <div class="nav-wrapper">
+      {{search submit=false instant=settings.instant_search class="bar-search " placeholder=""}}
     <span class="icon-menu" tabindex="0" role="button" aria-controls="user-nav" aria-expanded="false"
       aria-label="{{t 'toggle_navigation'}}"></span>
     <nav class="user-nav" id="user-nav">
@@ -29,3 +30,13 @@
     {{user_info}}
   </div>
 </header>
+
+<script>
+  var barSearch = document.querySelector('.bar-search');
+  var barSearchInput = barSearch.lastElementChild;
+
+  barSearch.addEventListener('click', function(e) {
+    e.stopPropagation();
+    barSearchInput.focus();
+  });
+</script>
