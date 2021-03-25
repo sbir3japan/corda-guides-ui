@@ -1102,7 +1102,7 @@ input[type=submit][disabled] {
 }
 
 .hero-large {
-    height: 85vh
+    height: 60vh
 }
 
 .hero-small {
@@ -1127,7 +1127,7 @@ input[type=submit][disabled] {
 }
 
 .hero-large::before {
-    max-height: 85vh
+    max-height: 60vh
 }
 
 .hero-small::before {
@@ -1138,11 +1138,11 @@ input[type=submit][disabled] {
     position: relative;
     /* hero style old */
     /* top: 50%; */
-    top: 38%;
+    top: 40%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     max-width: 1160px;
-    margin: 0 auto 5rem auto;
+    margin: 0 auto 2rem auto;
     z-index: 2;
     color: #fff
 }
@@ -1166,12 +1166,12 @@ input[type=submit][disabled] {
     /* color: #fff; */
     color: #333;
     font-weight: 600;
-    margin-bottom: 16px
+    /* margin-bottom: 16px */
 }
 
 @media(min-width: 580px) {
     .hero-inner-home-heading {
-        font-size: 48px
+        font-size: 36px
     }
 }
 
